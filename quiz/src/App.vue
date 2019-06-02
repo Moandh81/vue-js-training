@@ -6,7 +6,7 @@
 
   <b-card :header="questions[index].question"  header-tag="header">
       <b-list-group>
-          <b-list-group-item button v-for="item in questions[index].answers" :key="item"
+          <b-list-group-item button v-for="(item, index) in questions[index].answers" :key="item.id"
           @click="action(index)">
            {{item}}
          </b-list-group-item>
